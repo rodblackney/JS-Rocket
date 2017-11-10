@@ -15,24 +15,24 @@
 	<div class="left">
 
 		<!-- State 1 -->
-		<div class="state1">
+		<div class="interface state1">
 			<h1>JS Rocket Launch!</h1>			
 			<a href="#" class="button" onclick="changeState(2);">Launch!</a>
 		</div>
 
 		<!-- State 2 -->
-		<div class="state2">
+		<div class="interface state2">
 			<h1 id="countdown">10</h1>			
-			<a href="#" class="button" onclick="changeState(1);">Abort! Abort!</a>
+			<a href="#" onclick="changeState(1);">Abort! Abort!</a>
 		</div>
 
 		<!-- State 3 -->
-		<div class="state3">
+		<div class="interface state3">
 			<h1 id="countdown">Lift Off!</h1>			
 		</div>
 
 		<!-- State 4 -->
-		<div class="state4">
+		<div class="interface state4">
 			<h1 id="countdown">Well Done!</h1>			
 			<a href="#" class="button" onclick="changeState(1);">Do It Again!</a>			
 		</div>
@@ -51,13 +51,10 @@
 	<!-- Right Side -->
 	<div class="right">
 
-		<div class="rocket">
-			
-		</div>
-
-		<div class="ground">
-			
-		</div>
+		<div class="rocket"></div>
+		<div class="ground"></div>
+		<div class="nervous" id="nervous"></div>
+		<div class="cant-wait" id="cant-wait"></div>
 
 	</div>
 

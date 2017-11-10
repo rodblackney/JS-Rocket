@@ -1,6 +1,16 @@
 
 /* Layout */
 
+
+/*body {
+	font-family: 'arial', 'helvetica', sans-serif;
+}
+*/
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
 .left {
     background-color: aquamarine;
     position: fixed;
@@ -10,6 +20,10 @@
     left: 0;
 }
 
+.interface {
+	text-align: center;
+	padding: 20px;
+}
 
 .right {
     background-color: aliceblue;
@@ -25,15 +39,36 @@
 .rocket {
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
-	transition: 1000ms;
+	bottom: -2px;
+	z-index: 999;
+	width: 143px;
+	height: 272px;
+	margin-left: -71.5px;
+	background: url('../img/rocket-state1.png') no-repeat 0 0;
+	transition: 980ms;
 }
+
+/*rocket bg image */
+body.body-state2 .rocket{
+	background: url('../img/rocket-state2.gif') no-repeat 0 0;	
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background: url('../img/rocket-state3.gif') no-repeat 0 0;	
+}
+
+
 
 body.body-state1 .rocket{
 	transition: none;
+}
+
+body.body-state5 .rocket{
+	background: url('../img/boom.png') no-repeat 0 0;
+	width: 209px;
+	height: 200px;
+	margin-left: -104.5px;
 }
 
 
@@ -47,15 +82,6 @@ body.body-state4 .rocket{
 }*/
 
 
-.ground {
-	background-color: green;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 20px;
-}
-
 /* States */
 
 .state1, .state2, .state3, .state4, .state5 {
@@ -68,11 +94,67 @@ body.body-state3 .state3 { display: block; }
 body.body-state4 .state4 { display: block; }
 body.body-state5 .state5 { display: block; }
 
+
+.ground {
+	background: url('../img/ground.png') no-repeat center 0;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+}
+
+
+.nervous {
+	position: absolute;
+	left: 50%;
+	bottom: 220px;
+	background: url('../img/nervous.png') no-repeat 0 0;
+	width: 223px;
+	height: 100px;
+	margin-left: 180px;
+	display: none;
+}
+
+.nervous .show {
+	display: block
+}
+
+.cant-wait {
+	position: absolute;
+	left: 50%;
+	bottom: 220px;
+	background: url('../img/cant-wait.png') no-repeat 0 0;
+	width: 206px;
+	height: 65px;
+	margin-left: 180px;
+/*	display: none;*/
+}
+
+.cant-wait .show {
+	display: block
+}
+
 a {
 
 }
 
 
 a.button {
-
+	display: inline-block;
+	background-color: white;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	color: black;
+	text-transform: uppercase;
+	color: transition: 300ms;
 }
+
+
+a.hover {
+	color: red;
+}
+
+
+
